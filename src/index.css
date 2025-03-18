@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li, summary { list-style: none;}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Inter", sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* hazır kodlarım */
+
+.full-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 124px;
+    padding-top: 58px;
+}
+
+.main-box {
+    width: 736px;
+}
+
+.header {
+    margin-bottom: 51.5px;
+    display: flex;
+    justify-content: space-between;
+    > select {
+        outline: none;
+        border: none;
+        padding-right: 8px;
+        > option {
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.search-bar {
+    background-color: #f4f4f4;
+    position: relative;
+    border-radius: 16px;
+    height: 64px;
+    margin-bottom: 45px;
+    > input {
+        padding: 20px 24px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        inset: 0;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 64px;
+    }
+    > button {
+        position: absolute;
+        right: 24px;
+        top: 23px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.word {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    height: 114px;
+    margin-bottom: 40px;
+    > h1 {
+        font-size: 64px;
+        font-weight: bold;
+        color: #2d2d2d;
+    }
+    > p {
+        color: #a445ed;
+        font-size: 24px;
+    }
+    > button {
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 19.5px;
+    }
+}
+
+.noun, .verb {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+    > header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d2d2d;
+            font-style: italic;
+            display: inline;
+        }
+        > div {
+            width: 656px;
+            height: 1px;
+            background-color: #e9e9e9;
+        }
+    }
+    > main {
+        > h2 {
+            margin-bottom: 25px;
+            font-size: 20px;
+            color: #757575;
+            font-weight: 400;
+        }
+    }
+    > footer {
+        display: flex;
+        gap: 22px;
+        > h2 {
+            font-size: 20px;
+            color: #757575;
+            font-weight: 400;
+        }
+        > p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #a445ed;
+            cursor: pointer;
+        }
+        > p:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.verb {
+    padding-bottom: 27px;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+}
+
+.ex-item {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    padding-left: 22px;
+    > div {
+        margin-top: 8px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #a445ed;
+    }
+    > p {
+        width: 711px;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 13px;
+    }
+}
+
+.source {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    > p {
+        font-size: 14px;
+        color: #757575;
+    }
+    > a {
+        font-size: 14px;
+        color: #2d2d2d;
+        text-decoration: underline;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+.null {
+    margin-top: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    height: 485px;
+    gap: 24px;
+    > h1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2d2d2d
+    }
+    > p {
+        font-size: 18px;
+        color: #757575;
+        line-height: 24px;
+    }
+}
